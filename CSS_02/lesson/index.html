@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .section1 {
+            margin-bottom: 30px;
+        }
+
+        /* -------------------- */
+
+        /* Пробіл звернення в середені */
+        .hero .title {
+            color: black;
+        }
+
+
+
+        /* Псево Єлементи */
+
+        /*  звернення на одному рівні */
+        .title.red {
+            color: red;
+        }
+
+        /*  Псево єлементи :before :after */
+
+        .title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: blue;
+        }
+
+
+
+        /* -------------------- */
+
+        /* Не приорітетні */
+        h1,
+        h2,
+        h3 {
+            color: red;
+        }
+
+        .hero>.title {
+            color: green;
+        }
+
+        /*  звернення до першого єлементу під */
+        .button+.description {
+            color: red;
+        }
+
+        /*  звернення до всіх єлементу під */
+        .button~.description {
+            color: red;
+        }
+
+
+        /* Псеводо Класси :hover :focus :active*/
+        .box1 {
+            transition: all 1s ease-in-out;
+        }
+
+        .box1:hover {
+            color: red;
+        }
+
+        .sec-row {
+            padding: 100px 0;
+        }
+
+        .section1 {
+            padding-bottom: 100px;
+        }
+
+        /* Звернення до першого */
+        .section1:first-child {
+            color: red;
+        }
+
+        /* Звернення до останього */
+        .section1:last-child {
+            color: red;
+            padding-bottom: 0;
+        }
+
+        /* Звернення по індексу */
+        .section1:nth-child(3) {
+            background-color: blueviolet;
+        }
+
+        /* Звернення парні не парні */
+        .section1:nth-child(2n) {
+            background-color: red;
+        }
+
+        /* p:nth-child(odd) {
+            background: red;
+        }
+
+        p:nth-child(even) {
+            background: lightgreen;
+        }
+         
+        p:nth-child(3n+0) {
+          background: red;
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Selector</h1>
+
+        <div class="container">
+
+        </div>
+        <main class="main page--home">
+            <section class="hero">
+                <h1 class="title red">test</h1>
+                <h1 class="title">test</h1>
+
+                <div class="box">
+                    <h1 class="title">test</h1>
+                </div>
+
+                <button class="button">start</button>
+
+                <div class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+                    nesciunt? </div>
+                <div class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+                    nesciunt? </div>
+                <div class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+                    nesciunt? </div>
+                <div class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+                    nesciunt? </div>
+
+            </section>
+
+
+            <section class="section">
+                <h1 class="section__title title">
+                    Test 1
+                </h1>
+
+                <div class="box1">trst</div>
+            </section>
+        </main>
+
+
+        <div class="sec-row">
+            <section class="section1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt in necessitatibus quos. Ipsum odio,
+                temporibus architecto nemo reiciendis debitis natus error fugit illo, eaque, culpa veniam neque magnam
+                cupiditate nobis perferendis ab provident. Ipsam aperiam non inventore facere, a doloremque! Modi nisi
+                earum magnam omnis quasi maiores iste repellendus ullam eius sunt, quis illo dignissimos perferendis.
+                Impedit repellat blanditiis fugit nam doloremque sed, consequuntur officiis velit optio accusamus unde
+                ex repellendus numquam aspernatur laborum distinctio, delectus animi ipsam provident dolorem voluptates
+                voluptatem. Repellendus, fuga. Ducimus qui sunt et ab quas suscipit dolorum pariatur nisi, esse fugiat
+                aliquam saepe vel ea?
+            </section>
+            <section class="section1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt in necessitatibus quos. Ipsum odio,
+                temporibus architecto nemo reiciendis debitis natus error fugit illo, eaque, culpa veniam neque magnam
+                cupiditate nobis perferendis ab provident. Ipsam aperiam non inventore facere, a doloremque! Modi nisi
+                earum magnam omnis quasi maiores iste repellendus ullam eius sunt, quis illo dignissimos perferendis.
+                Impedit repellat blanditiis fugit nam doloremque sed, consequuntur officiis velit optio accusamus unde
+                ex repellendus numquam aspernatur laborum distinctio, delectus animi ipsam provident dolorem voluptates
+                voluptatem. Repellendus, fuga. Ducimus qui sunt et ab quas suscipit dolorum pariatur nisi, esse fugiat
+                aliquam saepe vel ea?
+            </section>
+            <section class="section1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt in necessitatibus quos. Ipsum odio,
+                temporibus architecto nemo reiciendis debitis natus error fugit illo, eaque, culpa veniam neque magnam
+                cupiditate nobis perferendis ab provident. Ipsam aperiam non inventore facere, a doloremque! Modi nisi
+                earum magnam omnis quasi maiores iste repellendus ullam eius sunt, quis illo dignissimos perferendis.
+                Impedit repellat blanditiis fugit nam doloremque sed, consequuntur officiis velit optio accusamus unde
+                ex repellendus numquam aspernatur laborum distinctio, delectus animi ipsam provident dolorem voluptates
+                voluptatem. Repellendus, fuga. Ducimus qui sunt et ab quas suscipit dolorum pariatur nisi, esse fugiat
+                aliquam saepe vel ea?
+            </section>
+            <section class="section1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt in necessitatibus quos. Ipsum odio,
+                temporibus architecto nemo reiciendis debitis natus error fugit illo, eaque, culpa veniam neque magnam
+                cupiditate nobis perferendis ab provident. Ipsam aperiam non inventore facere, a doloremque! Modi nisi
+                earum magnam omnis quasi maiores iste repellendus ullam eius sunt, quis illo dignissimos perferendis.
+                Impedit repellat blanditiis fugit nam doloremque sed, consequuntur officiis velit optio accusamus unde
+                ex repellendus numquam aspernatur laborum distinctio, delectus animi ipsam provident dolorem voluptates
+                voluptatem. Repellendus, fuga. Ducimus qui sunt et ab quas suscipit dolorum pariatur nisi, esse fugiat
+                aliquam saepe vel ea?
+            </section>
+            <section class="section1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt in necessitatibus quos. Ipsum odio,
+                temporibus architecto nemo reiciendis debitis natus error fugit illo, eaque, culpa veniam neque magnam
+                cupiditate nobis perferendis ab provident. Ipsam aperiam non inventore facere, a doloremque! Modi nisi
+                earum magnam omnis quasi maiores iste repellendus ullam eius sunt, quis illo dignissimos perferendis.
+                Impedit repellat blanditiis fugit nam doloremque sed, consequuntur officiis velit optio accusamus unde
+                ex repellendus numquam aspernatur laborum distinctio, delectus animi ipsam provident dolorem voluptates
+                voluptatem. Repellendus, fuga. Ducimus qui sunt et ab quas suscipit dolorum pariatur nisi, esse fugiat
+                aliquam saepe vel ea?
+            </section>
+            <section class="section1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt in necessitatibus quos. Ipsum odio,
+                temporibus architecto nemo reiciendis debitis natus error fugit illo, eaque, culpa veniam neque magnam
+                cupiditate nobis perferendis ab provident. Ipsam aperiam non inventore facere, a doloremque! Modi nisi
+                earum magnam omnis quasi maiores iste repellendus ullam eius sunt, quis illo dignissimos perferendis.
+                Impedit repellat blanditiis fugit nam doloremque sed, consequuntur officiis velit optio accusamus unde
+                ex repellendus numquam aspernatur laborum distinctio, delectus animi ipsam provident dolorem voluptates
+                voluptatem. Repellendus, fuga. Ducimus qui sunt et ab quas suscipit dolorum pariatur nisi, esse fugiat
+                aliquam saepe vel ea?
+            </section>
+            <section class="section1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt in necessitatibus quos. Ipsum odio,
+                temporibus architecto nemo reiciendis debitis natus error fugit illo, eaque, culpa veniam neque magnam
+                cupiditate nobis perferendis ab provident. Ipsam aperiam non inventore facere, a doloremque! Modi nisi
+                earum magnam omnis quasi maiores iste repellendus ullam eius sunt, quis illo dignissimos perferendis.
+                Impedit repellat blanditiis fugit nam doloremque sed, consequuntur officiis velit optio accusamus unde
+                ex repellendus numquam aspernatur laborum distinctio, delectus animi ipsam provident dolorem voluptates
+                voluptatem. Repellendus, fuga. Ducimus qui sunt et ab quas suscipit dolorum pariatur nisi, esse fugiat
+                aliquam saepe vel ea?
+            </section>
+
+        </div>
+    </div>
+</body>
+
+</html>
