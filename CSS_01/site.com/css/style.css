@@ -6,25 +6,83 @@
     box-sizing: border-box;
 }
 
+body {
+    color: #070707;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: normal;
+}
+
 button {
     background-color: transparent;
     border: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+
+}
+
 .title {
-    color: #070707;
-
-    font-family: 'Open Sans', sans-serif;
-
     font-size: 72px;
-
-    /* font-style: normal; */
-
     font-weight: 700;
-
-    line-height: normal;
-
     text-align: left;
 }
 
+.h2 {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    font-weight: 500;
+}
+
+.link {
+    color: #828282;
+}
+
+.link--active {
+    color: #070707;
+}
+
+.container {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    /* margin-left: auto; */
+}
+
 /* Global style End */
+
+
+/* Global Header */
+.header__nav {
+    text-align: center;
+}
+
+/* Global Header End */
+
+/* Section Hero */
+.hero__img {
+    width: 100%;
+}
+
+/* Section Hero End */
+
+/* Section About */
+.about {
+    background: #F6F6F6;
+}
+
+.about__container {
+    max-width: 480px;
+}
+
+/* Section About End */
