@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+
+
+    <style>
+        /* 1: Всі Кольори це змінні
+    2: Всі фонти теж через змінні */
+
+        :root {
+            --main-font: 'Courier New', Courier, monospace;
+            --sub-font: 'Arial', Courier, monospace;
+
+
+            /* colors */
+            --color-red: red;
+
+            /* fonts */
+            --title-fonts: 700 18px/26px var(--main-font);
+            --text-fonts: 500 16px/26px var(--main-font);
+        }
+
+        .red {
+            color: var(--color-red);
+        }
+
+        body {
+            font-family: var(--main-font);
+        }
+
+        .text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 700;
+
+        }
+
+        .text1 {
+            font: var(--title-fonts);
+        }
+
+        .box--title {
+            font: var(--title-fonts);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="title red">Test</h1>
+    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo alias optio adipisci quia
+        obcaecati magni
+        necessitatibus? Similique perferendis id laboriosam sunt nihil nobis nisi rerum, temporibus cum vel voluptas
+        beatae numquam excepturi veniam magni ratione qui! Cupiditate fugiat voluptas magni laborum quos blanditiis
+        quibusdam est eum vel culpa, perferendis dicta doloremque alias enim itaque facilis commodi aperiam magnam
+        voluptatibus? Id obcaecati nemo dolor tempora pariatur nihil debitis saepe. Rerum cumque ipsa repellendus! Nulla
+        commodi, perferendis ullam saepe aut non deleniti aperiam quas ea. Fugit neque, id corporis voluptates
+        voluptatum perspiciatis beatae commodi ducimus reiciendis earum excepturi sed unde quas nam?</p>
+    <p class="text1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo alias optio adipisci quia
+        obcaecati magni
+        necessitatibus? Similique perferendis id laboriosam sunt nihil nobis nisi rerum, temporibus cum vel voluptas
+        beatae numquam excepturi veniam magni ratione qui! Cupiditate fugiat voluptas magni laborum quos blanditiis
+        quibusdam est eum vel culpa, perferendis dicta doloremque alias enim itaque facilis commodi aperiam magnam
+        voluptatibus? Id obcaecati nemo dolor tempora pariatur nihil debitis saepe. Rerum cumque ipsa repellendus! Nulla
+        commodi, perferendis ullam saepe aut non deleniti aperiam quas ea. Fugit neque, id corporis voluptates
+        voluptatum perspiciatis beatae commodi ducimus reiciendis earum excepturi sed unde quas nam?</p>
+
+    <div class="box--title">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, eius.</p>
+    </div>
+
+</body>
+
+</html>
