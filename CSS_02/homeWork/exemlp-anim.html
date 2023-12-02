@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fild {
+            width: 300px;
+        }
+
+        .fild__text {
+            transform: scale(0);
+            overflow: hidden;
+            background-color: blue;
+            color: #fff;
+
+            transition: all 1s;
+        }
+
+        .fild__input {
+            display: none;
+        }
+
+        .fild__input:checked+.fild__text {
+            transform: scale(1);
+        }
+
+        .tab {
+            background-color: blue;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Chackbox Exemple</h1>
+
+
+
+        <div class="container">
+            <div class="fild">
+                <label for="tab1" class="tab">
+                    Tab 1
+                </label>
+                <input id="tab1" class="fild__input" type="checkbox">
+                <p class="fild__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus dolorum nemo
+                    corporis! Vel cupiditate
+                    esse quae, sapiente consectetur dolorum quasi obcaecati facilis quisquam repellat veniam facere in
+                    minima. Fugit minus pariatur excepturi maiores laudantium vitae officiis sint, laborum
+                    exercitationem,
+                    debitis fugiat earum perferendis mollitia dignissimos? Blanditiis minima magnam molestiae odit.</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
