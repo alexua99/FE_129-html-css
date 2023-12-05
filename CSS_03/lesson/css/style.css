@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --main-font: 'Roboto', sans-serif;
+    /* 1:font-weight 2:font-size/line-height 3:font-family */
+    --title-font: 700 24px/normal var(--main-font);
+    --sub-title-font: 400 16px/24px var(--main-font);
+
+    --text-font: 400 18px/24px var(--main-font);
+    --sub-text-font: 400 11px/18px var(--main-font);
+
+
+    /* Color variable */
+    --dark-grey-color: #3B3F45;
+    --light-grey-color: #4A4F56;
+    --white-color: #fff;
+    --red-color: #FF8984;
+
+    --field-color: #88839E;
+    --field-sub-color: #7A7593;
+    --field-hover-color: #625E77;
+    --field-active-color: var(--red-color);
+
+    --disbled-color: #9B96AC;
+
+}
+
+
+body {
+    font: var(--text-font);
+    background-color: var(--dark-grey-color);
+    color: var(--white-color);
+}
+
+.container {
+    max-width: 534px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    background-color: var(--light-grey-color);
+    padding: 19px 0 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--red-color);
+}
+
+.header__title {
+    font: var(--title-font);
+    margin-bottom: 4px;
+}
+
+.header__text {
+    font: var(--sub-title-font);
+}
+
+/* Form Section */
+
+.form__field {
+    background-color: var(--field-color);
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.form__field:nth-child(even) {
+    background-color: var(--field-sub-color);
+}
+
+.form__field:hover {
+    background-color: var(--field-hover-color);
+    border-top: 3px solid var(--white-color);
+    border-bottom: 3px solid var(--white-color);
+}
+
+.form__field:active {
+    background-color: var(--red-color);
+}
+
+.form__text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form__sub-text {
+    font: var(--sub-text-font);
+
+}
+
+.form__sub-text::before {
+    content: "(";
+}
+
+.form__sub-text::after {
+    content: ")";
+}
+
+.form__check {
+    width: 19px;
+    height: 19px;
+}
+
+.form__label {
+    width: 100%;
+    padding: 12px 0;
+}
+
+.form__check:checked+.form__label span {
+    text-decoration: line-through;
+    color: var(--disbled-color);
+}
+
+.form .container {
+    max-height: 300px;
+    overflow-y: scroll;
+}
