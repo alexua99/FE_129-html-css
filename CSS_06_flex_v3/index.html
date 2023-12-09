@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            height: 200px;
+            background: blue;
+        }
+
+        .aside {
+
+            background: green;
+        }
+
+        .content {
+            background-color: yellow
+        }
+
+        .footer {
+            height: 200px;
+            background: red;
+        }
+
+        .main__container {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .aside {
+
+            flex-grow: 1;
+
+            max-width: 330px;
+        }
+
+        .content {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 10px;
+            /* Коофіцієнт стискання */
+            /* flex-shrink: 1; */
+
+            /* Заповнює вільне місце */
+            flex-grow: 1;
+
+            /* розмір по основній осі  row = width  column = height */
+            /* flex-basis: 100px; */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .item {
+            width: 32%;
+            background-color: blue;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <h1>Header</h1>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container main__container">
+                <aside class="aside">aside gsdf gdsf </aside>
+                <div class="content">
+
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+
+        </main>
+        <div class="footer">
+            <div class="container">
+                <h1>Footer</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
