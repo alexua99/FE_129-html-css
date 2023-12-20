@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .form {
+            background-color: aqua;
+            border-radius: 20px;
+            border: 1px solid;
+            padding: 20px;
+            width: 400px;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        .input,
+        .form__select {
+            border: 2px solid green;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: transparent;
+            color: red;
+            outline: none;
+            width: 100%;
+        }
+
+        .input:focus {
+            border: 2px solid blueviolet;
+            background-color: lightblue;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+
+        .form__field {
+            position: relative;
+            width: 100%;
+        }
+
+        .form__field-name {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            transition: all 0.5s;
+        }
+
+        .input:focus+.form__field-name {
+            background-color: aqua;
+            border-radius: 10px;
+            padding: 0px 5px;
+            top: -8px;
+            font-size: 12px;
+        }
+
+        .form__row {
+            display: flex;
+            gap: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form__checkbox-icon {
+
+            width: 24px;
+            height: 24px;
+            border-radius: 3px;
+            border: 1px solid red;
+            flex-shrink: 0;
+        }
+
+        .field-icon {
+            display: none;
+        }
+
+        #chak01 {
+            display: none;
+        }
+
+        #chak01:checked+label .field-icon {
+            display: block;
+        }
+
+        #chak01:checked+label .form__checkbox-icon {
+            background-color: blueviolet;
+            border: 1px solid blue;
+        }
+
+        #chak01:checked+label .form__checkbox-text {
+            color: blue;
+        }
+
+        .form__checkbox-text {
+            color: red;
+        }
+
+        .form__label {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="form">
+        <h2>Regestration</h2>
+        <div class="form__row">
+            <div class="form__field">
+                <input class="input" type="text" placeholder="First Name" required>
+            </div>
+            <div class="form__field">
+                <input class="input" type="text" placeholder="Last Name" required>
+            </div>
+        </div>
+        <div class="form__field">
+            <input class="input" type="number">
+            <span class="form__field-name">Phone</span>
+        </div>
+        <div class="form__field">
+            <input class="input" type="email" placeholder="Email">
+        </div>
+        <div class="form__checkbox">
+            <input id="chak01" type="checkbox" required>
+            <label class="form__label" for="chak01">
+                <div class="form__checkbox-icon">
+                    <svg class="field-icon" viewBox="0 0 24 24" height="24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                    </svg>
+                </div>
+                <div class="form__checkbox-text">
+                    Тобі є 18 років
+                </div>
+            </label>
+        </div>
+        <div class="form__sel">
+            <select class="form__select">
+                <option value="0"> -- </option>
+                <option value="1">USD</option>
+                <option value="2">UAH</option>
+                <option value="3">EUR</option>
+            </select>
+        </div>
+
+
+
+        <button>Submit</button>
+    </form>
+
+
+
+</body>
+
+</html>
