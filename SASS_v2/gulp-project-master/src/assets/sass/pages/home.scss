@@ -1,0 +1,36 @@
+.home {
+
+    // Section Hero
+    .hero {
+        padding: 127rem 0;
+
+        &__title {
+            max-width: 710rem;
+        }
+    }
+
+    // Section Slider
+
+    .carusel {
+
+        display: flex;
+        gap: 32rem;
+
+        overflow-x: scroll;
+
+        // Приховати скролбар
+        // &::-webkit-scrollbar {
+        //     display: none;
+        // }
+
+        &__item {
+            width: 544rem;
+            flex-shrink: 0;
+        }
+
+        &__img {
+            width: 100%;
+        }
+    }
+
+}
