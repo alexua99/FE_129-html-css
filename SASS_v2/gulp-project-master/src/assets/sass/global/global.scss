@@ -7,9 +7,15 @@ body {
     color: var(--Base-Black);
 }
 
-.wrapper {}
+.wrapper {
+
+    @media (max-width: $media-991) {
+        overflow: hidden;
+    }
+}
 
 .container {
     max-width: 1120rem;
     margin: 0 auto;
+    padding: 0 16rem;
 }
